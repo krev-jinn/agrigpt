@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/samunnati-logo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+    <title>AgriGPT | Samunnati AI for Farmers</title>
+    
+    <!-- Fresh, creative, human fonts: Outfit + Indic fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Noto+Sans+Devanagari:wght@400;500;600;700&family=Noto+Sans+Tamil:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['"Outfit"', '"Noto Sans Tamil"', '"Noto Sans Devanagari"', 'sans-serif'],
+            },
+            colors: {
+              agrigold: {
+                50: '#fffbeb',
+                100: '#fef3c7',
+                200: '#fde68a',
+                400: '#fbbf24',
+                500: '#f59e0b',
+                600: '#d97706',
+              },
+              agrigreen: {
+                50: '#f0fdf4',
+                100: '#dcfce7',
+                200: '#bbf7d0',
+                400: '#4ade80',
+                500: '#22c55e',
+                600: '#16a34a',
+                700: '#15803d',
+                800: '#166534',
+                900: '#14532d',
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      html, body {
+        width: 100%;
+        min-height: 100%;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+        scroll-behavior: smooth;
+      }
+      body {
+        font-family: 'Outfit', 'Noto Sans Tamil', 'Noto Sans Devanagari', sans-serif;
+        color: #1e293b;
+        /* Agricultural Farm Field Background Spanning Full Screen */
+        background-color: #0b2e16;
+        background-image: 
+          linear-gradient(rgba(10, 35, 18, 0.82), rgba(15, 45, 25, 0.88)),
+          url('/farm-bg.jpg');
+        background-size: cover;
+        background-position: center top;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+      }
+
+      /* Animated organic pulse for the voice mic */
+      @keyframes voicePulse {
+        0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7); }
+        50% { transform: scale(1.08); box-shadow: 0 0 0 18px rgba(34, 197, 94, 0); }
+        100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
+      }
+      .mic-recording-pulse {
+        animation: voicePulse 1.3s infinite ease-in-out;
+      }
+    </style>
+  </head>
+  <body class="antialiased selection:bg-emerald-300 selection:text-emerald-950">
+    <div id="root" class="w-full min-h-screen"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
